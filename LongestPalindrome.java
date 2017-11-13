@@ -8,7 +8,7 @@ public class LongestPalindrome {
 		if (s.length() <= 1)
 			return s;
 		int maxLen = 0;
-		String longestStr = null;
+		String longestStr = s.substring(0,1);
 		int length = s.length();
 		int[][] table = new int[length][length];
 		for (int i = 0; i < length; i++) {
@@ -18,7 +18,7 @@ public class LongestPalindrome {
 		for (int i = 0; i < length - 1; i++) {
 			if (s.charAt(i) == s.charAt(i + 1)) {
 				table[i][i + 1] = 1;
-				longestStr = s.substring(i, i + 1);
+				longestStr = s.substring(i, i + 2);
 			}
 		}
 		// l为子串长度
@@ -41,7 +41,7 @@ public class LongestPalindrome {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		LongestPalindrome lp = new LongestPalindrome();
-		String s = "caba";
+		String s = "abcda";
 		String result = lp.longestPalindrome(s);
 		System.out.println(result);
 	}
