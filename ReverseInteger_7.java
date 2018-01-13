@@ -36,8 +36,8 @@ public class ReverseInteger_7 {
             long result = Long.parseLong(resultStr.trim());
             if (result > Integer.MAX_VALUE)
                 return 0;
-            else{
-                int resultLast = (int)result;
+            else {
+                int resultLast = (int) result;
                 return resultLast;
             }
 
@@ -48,8 +48,13 @@ public class ReverseInteger_7 {
 
     public static void main(String[] args) {
         ReverseInteger_7 ri = new ReverseInteger_7();
-        int result = ri.reverse(1534236469);
-        System.out.println(result);
+        int[] result_arr = {1230, -3210, -342, 1534236469};
+        int result = 0;
+        for (int i = 0; i < result_arr.length; i++) {
+            result = ri.reverse(result_arr[i]);
+            System.out.println(result);
+        }
+
     }
 
 }
