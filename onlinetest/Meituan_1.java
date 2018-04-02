@@ -1,5 +1,9 @@
 package com.cxj.onlinetest;
 
+/**
+ * 求两个字符串的字符之间的最大差值
+ */
+
 import java.util.Scanner;
 
 public class Meituan_1 {
