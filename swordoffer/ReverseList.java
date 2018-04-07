@@ -21,6 +21,18 @@ public class ReverseList {
 
     }
 
+    public ListNode recurRevList(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+        ListNode p = recurRevList(head.next);
+
+        head.next.next = head;
+
+        head.next = null;
+
+        return p;
+    }
+
     public static void main(String[] args) {
         ReverseList rl = new ReverseList();
         ListNode l1 = new ListNode(1);
@@ -30,12 +42,17 @@ public class ReverseList {
         l1.next = l2;
         l2.next = l3;
         l3.next = l4;
-        ListNode result = rl.reverseList(l1);
+//        ListNode result = rl.reverseList(l1);
+//        for (int i = 0; i < 4; i++) {
+//            System.out.println(result.val);
+//            result = result.next;
+//        }
+        System.out.println("----------recursive-------------");
+        ListNode re = rl.recurRevList(l1);
         for (int i = 0; i < 4; i++) {
-            System.out.println(result.val);
-            result = result.next;
+            System.out.println(re.val);
+            re = re.next;
         }
-//        System.out.println(result);
     }
 
 }
