@@ -1,6 +1,8 @@
 package com.cxj.swordoffer;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * 题目描述
@@ -54,6 +56,22 @@ public class ReconstructBinaryTree {
     }
 
     //    使用队列实现二叉树层次遍历
+    public void levelTranse(TreeNode node) {
+        if (node == null)
+            return;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(node);
+        while (queue.size() != 0) {
+            TreeNode temp = queue.poll();
+            System.out.println(temp.val);
+
+            if (temp.left != null)
+                queue.add(temp.left);
+            if (temp.right != null)
+                queue.add(temp.right);
+        }
+    }
+
     public static void main(String[] args) {
         ReconstructBinaryTree rb = new ReconstructBinaryTree();
         /**
@@ -67,7 +85,8 @@ public class ReconstructBinaryTree {
         TreeNode node = rb.reConstructBinaryTree(pre, in);
 
 //        层次遍历
-
+        System.out.println("LevelTranse:\n");
+        rb.levelTranse(node);
 //        先序遍历
         System.out.println("PreOrder:\n");
         rb.preOrder(node);
