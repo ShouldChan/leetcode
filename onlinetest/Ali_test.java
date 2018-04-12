@@ -15,17 +15,28 @@ public class Ali_test {
             System.out.println(0);
             return;
         }
-        int res = 2;
+        if (N == 1) {
+            System.out.println(3);
+            return;
+        }
+        int res = 0;
         Set<Double> set = new HashSet<>();
+        set.add((double) 1 / 1);
+        System.out.println(set);
+
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= N; j++) {
-                if (!set.contains((double) (j) / i)) {
-                    res++;
-                    set.add((double) (j) / i);
+//                根据对称性质 只计算一半的矩阵就行了
+                if ((double) i / j > 1.0) {
+                    if (!set.contains((double) (j) / i)) {
+                        res++;
+                        set.add((double) (j) / i);
+                    }
                 }
 
             }
         }
-        System.out.println(res);
+
+        System.out.println(res * 2 + 3);
     }
 }
