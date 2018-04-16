@@ -106,10 +106,42 @@ public class ConvertaNumbertoHexadecimal_405 {
         return binArray;
     }
 
+    //--------------------------本科bxd老师教的方法------------------------------
+    //十进制转十六进制
+    public static String decToHex(int num) {
+        //1.建表
+        char[] chs = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+        //2.创建临时容器
+        char[] hexArr = new char[8];
+        //3.创建临时容器的角标
+        int index = hexArr.length;
+        //4.通过循环对num进行&，>>>运算
+        while (num != 0) {
+            //5.对num进行&运算
+            int temp = num & 15;
+            //6.根据运算后的结果作为角标，获取对应字符，存储到临时容器
+            hexArr[--index] = chs[temp];
+            //7.对num右移
+            num = num >>> 4;
+        }
+        return toString(hexArr, index);
+
+
+    }
+
+    public static String toString(char[] arr, int index) {
+        String temp = "";
+        for (int i = index; i < arr.length; i++) {
+            temp += arr[i];
+        }
+        return temp;
+    }
+
     public static void main(String[] args) {
         ConvertaNumbertoHexadecimal_405 test405 = new ConvertaNumbertoHexadecimal_405();
 
         System.out.println(test405.toHex(26));
 
+        System.out.println(decToHex(-1));
     }
 }
