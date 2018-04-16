@@ -109,6 +109,8 @@ public class ConvertaNumbertoHexadecimal_405 {
     //--------------------------本科bxd老师教的方法------------------------------
     //十进制转十六进制
     public static String decToHex(int num) {
+        if (num == 0)
+            return "0";
         //1.建表
         char[] chs = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
         //2.创建临时容器
