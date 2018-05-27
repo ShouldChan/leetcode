@@ -5,19 +5,17 @@ public class BalancedBinaryTree_110 {
     public int getDepth(TreeNode node) {
         if (node == null)
             return 0;
-        return 1 + Math.max(getDepth(node.left), getDepth(node.right));
+        int leftHeight = getDepth(node.left);
+        if (leftHeight == -1)
+            return -1;
+        int rightHeight = getDepth(node.right);
+        if (rightHeight == -1)
+            return -1;
+        return Math.abs(leftHeight - rightHeight) > 1 ? -1 : 1 + Math.max(leftHeight, rightHeight);
     }
 
     public boolean isBalanced(TreeNode root) {
-        if (root == null)
-            return false;
-        if (!isBalanced(root.left) || !isBalanced(root.right))
-            return false;
-        int left = getDepth(root.left);
-        int right = getDepth(root.right);
-        if (Math.abs(left - right) <= 1)
-            return true;
-        return false;
+        return getDepth(root) != -1;
     }
 
     public static void main(String[] args) {
