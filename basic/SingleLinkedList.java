@@ -60,8 +60,10 @@ public class SingleLinkedList {
             stack.push(p.val);
             p = p.next;
         }
-        ListNode pre = new ListNode(0);
-        ListNode end = pre;
+//        使用一个dumy来作为一个返回结果的指针
+        ListNode dumy = new ListNode(0);
+        ListNode end = dumy;
+//        尾插法 end每次都指向最后一个元素
         while (!stack.empty()) {
             ListNode cur = new ListNode(stack.pop());
             end.next = cur;
@@ -69,7 +71,7 @@ public class SingleLinkedList {
 
         }
         end.next = null;
-        return pre.next;
+        return dumy.next;
     }
 
     /**
