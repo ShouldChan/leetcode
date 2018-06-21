@@ -22,7 +22,7 @@ public class SingleLinkedList {
         head.next = l1;
         l1.next = l2;
         l2.next = l3;
-        ListNode result = sl.reverse_fun1(head);
+        ListNode result = sl.reverse_fun3(head);
         while (result != null) {
             System.out.println(result.val);
             result = result.next;
@@ -50,6 +50,7 @@ public class SingleLinkedList {
      * 借助栈实现反转链表
      * 时间复杂度O(n)  2*n
      * 空间复杂度O(n)
+     *
      * @param head
      * @return
      */
@@ -78,6 +79,7 @@ public class SingleLinkedList {
      * 使用头插法逆序反转
      * 时间复杂度O(n)
      * 空间复杂度O(n) 每次new了一个
+     *
      * @param head
      * @return
      */
@@ -92,15 +94,22 @@ public class SingleLinkedList {
         return pre;
     }
 
-//    /**
-//     * 使用递归
-//     * @param head
-//     * @return
-//     */
-//    public ListNode reverse_fun3(ListNode head){
-//
-//    }
-//
+    /**
+     * 使用递归
+     *
+     * @param head
+     * @return
+     */
+    public ListNode reverse_fun3(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+        ListNode newNode = reverse_fun3(head.next);
+        head.next.next = head;
+        head.next = null;
+
+        return newNode;
+    }
+
 //    /**
 //     * 使用只有O(1)空间的做法
 //     * @param head
