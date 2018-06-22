@@ -22,7 +22,7 @@ public class SingleLinkedList {
         head.next = l1;
         l1.next = l2;
         l2.next = l3;
-        ListNode result = sl.reverse_fun3(head);
+        ListNode result = sl.reverse_fun4(head);
         while (result != null) {
             System.out.println(result.val);
             result = result.next;
@@ -104,18 +104,27 @@ public class SingleLinkedList {
         if (head == null || head.next == null)
             return head;
         ListNode newNode = reverse_fun3(head.next);
+
         head.next.next = head;
         head.next = null;
 
         return newNode;
     }
 
-//    /**
-//     * 使用只有O(1)空间的做法
-//     * @param head
-//     * @return
-//     */
-//    public ListNode reverse_fun4(ListNode head){
-//
-//    }
+    /**
+     * 使用只有O(1)空间的做法
+     * @param head
+     * @return
+     */
+    public ListNode reverse_fun4(ListNode head){
+        ListNode result=null;
+        ListNode next=null;
+        while(head!=null){
+            next=head.next;
+            head.next=result;
+            result=head;
+            head=next;
+        }
+        return result;
+    }
 }
