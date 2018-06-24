@@ -14,19 +14,35 @@ public class SingleLinkedList {
 //            result=result.next;
 //        }
 
-//      反转单链表
-        ListNode head = new ListNode(0);
-        ListNode l1 = new ListNode(2);
+//        反转单链表
+//        ListNode head = new ListNode(0);
+//        ListNode l1 = new ListNode(2);
+//        ListNode l2 = new ListNode(3);
+//        ListNode l3 = new ListNode(5);
+//        head.next = l1;
+//        l1.next = l2;
+//        l2.next = l3;
+//        ListNode result = sl.reverse_fun4(head);
+//        while (result != null) {
+//            System.out.println(result.val);
+//            result = result.next;
+//        }
+
+//      链表升序操作
+        ListNode head = new ListNode(6);
+        ListNode l1 = new ListNode(8);
         ListNode l2 = new ListNode(3);
         ListNode l3 = new ListNode(5);
         head.next = l1;
         l1.next = l2;
         l2.next = l3;
-        ListNode result = sl.reverse_fun4(head);
-        while (result != null) {
-            System.out.println(result.val);
-            result = result.next;
+
+        sl.ascSort(head,l3.next);
+        while(head!=null){
+            System.out.println(head.val);
+            head=head.next;
         }
+
     }
 
     /**
@@ -127,4 +143,34 @@ public class SingleLinkedList {
         }
         return result;
     }
+
+    /**
+     * 实现单链表的升序
+     * 使用快排的思想
+     * @param begin  链表的第一个节点不是头节点
+     * @param end   链表的最后一个节点的next，为null
+     */
+    public void ascSort(ListNode begin, ListNode end){
+        if(begin==end||begin.next==end)
+            return;
+        int pivot = begin.val;
+        ListNode i=begin;
+        ListNode j=begin.next;
+        while(j!=end){
+            if(j.val<pivot){
+                i=i.next;
+                int temp=i.val;
+                i.val=j.val;
+                j.val=temp;
+            }
+            j=j.next;
+        }
+        int temp=i.val;
+        i.val=begin.val;
+        begin.val=temp;
+
+        ascSort(begin,i);
+        ascSort(i.next,end);
+    }
+
 }
