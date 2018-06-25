@@ -28,21 +28,33 @@ public class SingleLinkedList {
 //            result = result.next;
 //        }
 
-//      链表升序操作
-        ListNode head = new ListNode(6);
-        ListNode l1 = new ListNode(8);
-        ListNode l2 = new ListNode(3);
-        ListNode l3 = new ListNode(5);
-        head.next = l1;
-        l1.next = l2;
-        l2.next = l3;
+//        链表升序操作
+//        ListNode head = new ListNode(6);
+//        ListNode l1 = new ListNode(8);
+//        ListNode l2 = new ListNode(3);
+//        ListNode l3 = new ListNode(5);
+//        head.next = l1;
+//        l1.next = l2;
+//        l2.next = l3;
+//
+//        sl.ascSort(head,l3.next);
+//        while(head!=null){
+//            System.out.println(head.val);
+//            head=head.next;
+//        }
 
-        sl.ascSort(head,l3.next);
-        while(head!=null){
-            System.out.println(head.val);
-            head=head.next;
-        }
-
+//        合并两个有序单链表
+//        ListNode l1 = new ListNode(1);
+//        l1.next = new ListNode(2);
+//        l1.next.next = new ListNode(4);
+//        ListNode l2 = new ListNode(1);
+//        l2.next = new ListNode(3);
+//        l2.next.next = new ListNode(4);
+//        ListNode result = sl.mergerTwoSortedLists(l1,l2);
+//        while(result!=null){
+//            System.out.println(result.val);
+//            result=result.next;
+//        }
     }
 
     /**
@@ -171,6 +183,30 @@ public class SingleLinkedList {
 
         ascSort(begin,i);
         ascSort(i.next,end);
+    }
+
+    /**
+     * 合并两个有序单链表
+     * @param l1
+     * @param l2
+     * @return
+     */
+    public ListNode mergerTwoSortedLists(ListNode l1, ListNode l2){
+        if(l1==null){
+            return l2;
+        }
+        if(l2==null){
+            return l1;
+        }
+        if(l1.val<l2.val){
+            ListNode tmp=l1;
+            tmp.next=mergerTwoSortedLists(l1.next,l2);
+            return tmp;
+        }else{
+            ListNode tmp=l2;
+            tmp.next=mergerTwoSortedLists(l1,l2.next);
+            return tmp;
+        }
     }
 
 }
