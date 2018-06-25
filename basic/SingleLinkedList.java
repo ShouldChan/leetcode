@@ -55,6 +55,18 @@ public class SingleLinkedList {
 //            System.out.println(result.val);
 //            result=result.next;
 //        }
+
+//        返回链表倒数第k个节点
+        ListNode head = new ListNode(6);
+        ListNode l1 = new ListNode(8);
+        ListNode l2 = new ListNode(3);
+        ListNode l3 = new ListNode(5);
+        head.next = l1;
+        l1.next = l2;
+        l2.next = l3;
+
+        ListNode result=sl.findKthtoTail(head,3);
+        System.out.println(result.val);
     }
 
     /**
@@ -209,4 +221,27 @@ public class SingleLinkedList {
         }
     }
 
+    /**
+     * 返回链表倒数第k个节点
+     * @param head
+     * @param k
+     * @return
+     */
+    public ListNode findKthtoTail(ListNode head, int k){
+        if(head==null||k<0)
+            return null;
+        ListNode first = head;
+        ListNode second = head;
+        for(int i=0;i<k;i++){
+            if(second!=null)
+                second=second.next;
+            else
+                return null;
+        }
+        while(second!=null){
+            first=first.next;
+            second=second.next;
+        }
+        return first;
+    }
 }
