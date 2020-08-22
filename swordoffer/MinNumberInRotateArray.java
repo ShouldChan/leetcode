@@ -9,7 +9,7 @@ public class MinNumberInRotateArray {
     public int minNumberInRotateArray(int[] array) {
 
         if (array == null || array.length <= 0)
-            System.out.println("array is empty.");
+            System.out.println("JiebiArray is empty.");
         int index1 = 0;
         int index2 = array.length - 1;
         int indexMid = index1;

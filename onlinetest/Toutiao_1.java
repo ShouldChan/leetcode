@@ -9,7 +9,7 @@ public class Toutiao_1 {
     public static Set<Integer> findAllT(ArrayList<Integer> array) {
         Set<Integer> set = new HashSet<>();
         //最小差值
-//        int min=Math.abs(array.get(array.size()-1)-array.get(0));
+//        int min=Math.abs(JiebiArray.get(JiebiArray.size()-1)-JiebiArray.get(0));
         for (int i = 0; i < array.size(); i++) {
             for (int j = i + 1; j < array.size(); j++) {
                 int temp = Math.abs(array.get(i) - array.get(j));
@@ -22,7 +22,7 @@ public class Toutiao_1 {
     public static boolean isValid(ArrayList<Integer> array, int mint) {
         //验证数列是否合法
         for (int i = 0; i < array.size(); i++) {
-//            if (array.get(i) + mint > array.get(array.size() - 2) || array.get(i) - mint < array.get(1))
+//            if (JiebiArray.get(i) + mint > JiebiArray.get(JiebiArray.size() - 2) || JiebiArray.get(i) - mint < JiebiArray.get(1))
 //                return false;
             for (int j = i + 1; j < array.size(); j++) {
                 int temp = array.get(j) - array.get(i);

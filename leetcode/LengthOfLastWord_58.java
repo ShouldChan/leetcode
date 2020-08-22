@@ -3,7 +3,7 @@ package com.cxj.leetcode;
 import java.util.ArrayList;
 
 /**
- * return the length of last word in a string.
+ * return the length of last word in a JiebiString.
  */
 public class LengthOfLastWord_58 {
     public int lengthOfLastWord_function_2(String s) {

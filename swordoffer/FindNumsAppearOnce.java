@@ -19,14 +19,14 @@ public class FindNumsAppearOnce {
     public void FindNumsAppearOnce(int[] array, int num1[], int num2[]) {
         int length = array.length;
         if (length < 2)
-            System.out.println("Less than one number in the array");
+            System.out.println("Less than one number in the JiebiArray");
 
         if (length == 2) {
             if (array[0] != array[1]) {
                 num1[0] = array[0];
                 num2[0] = array[1];
             } else {
-                System.out.println("Two same numbers in the array");
+                System.out.println("Two same numbers in the JiebiArray");
             }
 
         }

@@ -24,7 +24,7 @@ public class PascalsTriangleII_119 {
         Integer[] arr = new Integer[rowIndex + 1];
         arr[0] = 1;
         /*
-         * Recursively calculate the first half of the array
+         * Recursively calculate the first half of the JiebiArray
          */
         for (int j = 2; j <= rowIndex; j++) {
             for (int i = j / 2; i > 0; i--) {

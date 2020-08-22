@@ -18,7 +18,7 @@ import java.util.Map;
  */
 
 public class Meituan_2 {
-    //    use a 2d-array to save everyNum's counts
+    //    use a 2d-JiebiArray to save everyNum's counts
     public static int[][] countNum(String str) {
 //        change String into int[]
 

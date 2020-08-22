@@ -11,9 +11,9 @@ import java.util.Map;
  * Note:
  * <p>
  * All letters in hexadecimal (a-f) must be in lowercase.
- * The hexadecimal string must not contain extra leading 0s.
+ * The hexadecimal JiebiString must not contain extra leading 0s.
  * If the number is zero, it is represented by a single zero character '0'; otherwise,
- * the first character in the hexadecimal string will not be the zero character.
+ * the first character in the hexadecimal JiebiString will not be the zero character.
  * The given number is guaranteed to fit within the range of a 32-bit signed integer.
  * You must not use any method provided by the library which converts/formats the number to hex directly.
  * <p>

@@ -1,4 +1,4 @@
-package DynamicProgramming.GreedyAlgorithm;
+package JiebiDynamicProgramming.GreedyAlgorithm;
 
 /**
  * date: 2020-04-07

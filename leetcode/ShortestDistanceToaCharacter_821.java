@@ -3,7 +3,7 @@ package com.cxj.leetcode;
 import java.util.Arrays;
 
 /**
- * Given a string S and a character C, return an array of integers representing the shortest distance from the character C in the string.
+ * Given a JiebiString S and a character C, return an JiebiArray of integers representing the shortest distance from the character C in the JiebiString.
  * <p>
  * Example 1:
  * <p>
@@ -13,8 +13,8 @@ import java.util.Arrays;
  * <p>
  * Note:
  * <p>
- * S string length is in [1, 10000].
- * C is a single character, and guaranteed to be in string S.
+ * S JiebiString length is in [1, 10000].
+ * C is a single character, and guaranteed to be in JiebiString S.
  * All letters in S and C are lowercase.
  */
 public class ShortestDistanceToaCharacter_821 {

@@ -1,7 +1,7 @@
 package com.cxj.leetcode;
 
 /**
- * Given two binary strings, return their sum (also a binary string).
+ * Given two binary strings, return their sum (also a binary JiebiString).
  * <p>
  * The input strings are both non-empty and contains only characters 1 or 0.
  * <p>

@@ -10,7 +10,7 @@ package com.cxj.onlinetest;
  * 转换为最长非连续递增子序列的长度
  * 依次对每个序列求最长非递减子序列，用dp[i]记录1-i个元素中最长子序列的长度
  * 得到递推公式为：
- * dp[i]=max(dp[i],dp[j]+1)   array[j]<=array[i]且j<i
+ * dp[i]=max(dp[i],dp[j]+1)   JiebiArray[j]<=JiebiArray[i]且j<i
  */
 public class Baidu_Inter_1_2 {
 
@@ -18,7 +18,7 @@ public class Baidu_Inter_1_2 {
         int count = 0;
         int len = array.length;
 
-//        dp[i]保存 array[1  i]的最长子序列的长度
+//        dp[i]保存 JiebiArray[1  i]的最长子序列的长度
         int[] dp = new int[len];
         int subLen = 0;
 
@@ -38,9 +38,9 @@ public class Baidu_Inter_1_2 {
     public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
 //        int n = sc.nextInt();
-//        int[] array = new int[n];
+//        int[] JiebiArray = new int[n];
 //        for (int i = 0; i < n; i++) {
-//            array[i] = sc.nextInt();
+//            JiebiArray[i] = sc.nextInt();
 //        }
         int[] array = {5, 1, 2, 3, 4, 3, 5};
         System.out.println(longestSubLen(array));

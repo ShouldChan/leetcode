@@ -1,4 +1,6 @@
-package com.cxj.swordoffer;
+package swordoffer;
+
+import basic.ListNode;
 
 /**
  * 合并两个单增链表 维持单调不减规则

@@ -1,6 +1,6 @@
 package com.cxj.leetcode;
 
-//Write a function to find the longest common prefix string amongst an array of strings.
+//Write a function to find the longest common prefix JiebiString amongst an JiebiArray of strings.
 
 public class LongestCommonPrefix_14 {
 

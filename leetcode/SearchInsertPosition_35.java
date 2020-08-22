@@ -1,9 +1,9 @@
 package com.cxj.leetcode;
 
 /**
- * given a sorted array and a value, insert the value to make the array sorted
+ * given a sorted JiebiArray and a value, insert the value to make the JiebiArray sorted
  * return the position of insert.
- * input: array, value
+ * input: JiebiArray, value
  * output: the index of the position
  */
 public class SearchInsertPosition_35 {

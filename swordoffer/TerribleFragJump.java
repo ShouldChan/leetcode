@@ -1,4 +1,4 @@
-package com.cxj.swordoffer;
+package swordoffer;
 
 /**
  * 变态青蛙条台阶

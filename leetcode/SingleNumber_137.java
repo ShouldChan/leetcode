@@ -71,8 +71,8 @@ public class SingleNumber_137 {
 
     public static void main(String[] args) {
         int[] array = {11, 11, 11, 3, 2, 2, 2, 6, 6, 6};
-//        System.out.println(singleNum_1(array));
-//        System.out.println(singleNum_2(array));
+//        System.out.println(singleNum_1(JiebiArray));
+//        System.out.println(singleNum_2(JiebiArray));
         System.out.println(singleNum_3(array));
     }
 

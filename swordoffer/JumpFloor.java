@@ -1,4 +1,4 @@
-package com.cxj.swordoffer;
+package swordoffer;
 
 public class JumpFloor {
     public int iter_jump(int target) {

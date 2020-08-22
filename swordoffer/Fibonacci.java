@@ -1,4 +1,4 @@
-package com.cxj.swordoffer;
+package swordoffer;
 
 public class Fibonacci {
     public int recur_Fibonacci(int n) {

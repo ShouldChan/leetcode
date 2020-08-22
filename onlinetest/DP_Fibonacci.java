@@ -15,7 +15,7 @@ public class DP_Fibonacci {
     }
 
     //DP Fibonacci
-    //use space(array) to save the temporal variance
+    //use space(JiebiArray) to save the temporal variance
     public int dpFibo(int n) {
         n = n + 1;
         int[] array = new int[n];

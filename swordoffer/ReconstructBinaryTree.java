@@ -1,4 +1,4 @@
-package com.cxj.swordoffer;
+package swordoffer;
 
 import java.util.Arrays;
 import java.util.LinkedList;
