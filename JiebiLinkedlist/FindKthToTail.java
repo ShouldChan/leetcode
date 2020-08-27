@@ -11,6 +11,13 @@ import java.util.List;
  * @description 输入一个链表，输出该链表中倒数第k个结点。
  */
 public class FindKthToTail {
+    /**
+     * time O（n）
+     * space O(1)
+     * @param head
+     * @param k
+     * @return
+     */
     public ListNode findKthToTail(ListNode head, int k) {
         if (head == null || k <= 0) {
             return null;
