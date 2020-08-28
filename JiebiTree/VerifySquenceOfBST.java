@@ -8,4 +8,24 @@ package JiebiTree;
  */
 public class VerifySquenceOfBST {
 
+    public boolean VerifySquenceOfBST(int[] sequence) {
+        if (sequence == null || sequence.length == 0) return false;
+        return isPost(sequence, 0, sequence.length - 1);
+    }
+
+    public boolean isPost(int[] nums, int low, int high) {
+        if (low >= high) return true;
+        int mid = high;
+        for (int i = low; i < high; i++) {
+            if (nums[i] > nums[high]) {
+                mid = i;
+                break;
+            }
+        }
+        for (int i = mid; i < high; i++) {
+            if (nums[i] <= nums[high]) return false;
+        }
+        return isPost(nums, low, mid - 1) && isPost(nums, mid, high - 1);
+    }
+
 }
