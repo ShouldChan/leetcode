@@ -16,7 +16,7 @@ public class ThreadSort {
                         Thread.sleep(i);
                         System.out.println(i);
                     } catch (InterruptedException ignore) {
-
+                        ignore.printStackTrace();
                     }
                 }
             }).start();
@@ -24,7 +24,7 @@ public class ThreadSort {
     }
 
     public static void main(String[] args) {
-        int[] array = {2, 3, 5, 6, 1000*1000, 10, 5};
+        int[] array = {2, 3, 5, 6, 10, 10, 5};
         ThreadSort ts = new ThreadSort();
         ts.threadSort(array);
     }
