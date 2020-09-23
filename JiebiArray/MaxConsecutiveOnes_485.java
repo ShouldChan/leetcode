@@ -6,7 +6,7 @@ package JiebiArray;
  * @date 2020/9/22
  * @description 最大连续1的个数
  */
-public class FindMaxConsecutiveOnes {
+public class MaxConsecutiveOnes_485 {
     public int findMaxConsecutiveOnes(int[] nums) {
         int count = 0;
         int max = 0;
@@ -24,7 +24,7 @@ public class FindMaxConsecutiveOnes {
     }
 
     public static void main(String[] args) {
-        FindMaxConsecutiveOnes fm = new FindMaxConsecutiveOnes();
+        MaxConsecutiveOnes_485 fm = new MaxConsecutiveOnes_485();
         int[] nums = {1, 1, 0, 1, 1, 1};
         System.out.println(fm.findMaxConsecutiveOnes(nums));
     }
