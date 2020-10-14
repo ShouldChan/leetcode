@@ -26,9 +26,9 @@ public class MinStack {
         min.pop();
     }
 
-    public int top() {
-        return normal.peek();
-    }
+//    public int top() {
+//        return normal.peek();
+//    }
 
     public int min() {
         return min.peek();

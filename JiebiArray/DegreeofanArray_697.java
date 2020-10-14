@@ -33,6 +33,6 @@ package JiebiArray;
  */
 public class DegreeofanArray_697 {
     public int findShortestSubArray(int[] nums) {
-
+return 0;
     }
 }
